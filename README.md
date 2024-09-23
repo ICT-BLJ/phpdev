@@ -1,7 +1,7 @@
 # PHP Development Environment
 
 - [**MailDev**](https://github.com/maildev/maildev) SMTP Server + Web Interface for viewing and testing emails during development.
-- **PHP 7.4.x (CLI)** with Composer, PHP CodeSniffer, phpDocumentor, phpunit and XDebug for development.
+- **PHP 8.2.x (CLI)** with Composer, PHP CodeSniffer, phpDocumentor, phpunit and XDebug for development.
 
 ## Installation
 
