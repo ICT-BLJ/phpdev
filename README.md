@@ -26,7 +26,7 @@ Read more:
 
 ## Installed utilities
 
-- [PHP_CodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer) is a set of two PHP scripts; the main `phpcs` script that tokenizes PHP, JavaScript and CSS files to detect violations of a defined coding standard, and a second `phpcbf` script to automatically correct coding standard violations.
+- ~~[PHP_CodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer) is a set of two PHP scripts; the main `phpcs` script that tokenizes PHP, JavaScript and CSS files to detect violations of a defined coding standard, and a second `phpcbf` script to automatically correct coding standard violations.~~ **No longer maintained.**
 - [phpDocumentor](https://www.phpdoc.org/) is the de-facto documentation application for PHP projects.
 - [PHPUnit](https://phpunit.de/) is a programmer-oriented testing framework for PHP.
 - [Xdebug](https://xdebug.org/) - Debugger and Profiler Tool for PHP
@@ -42,7 +42,7 @@ The name of the trigger is XDEBUG_TRIGGER, and Xdebug checks for its presence in
 ## Installed vscode extensions
 
 - [PHP Debug](https://marketplace.visualstudio.com/items?itemName=xdebug.php-debug): Debug support for PHP with Xdebug
-- [phpcs](https://marketplace.visualstudio.com/items?itemName=ikappas.phpcs): PHP CodeSniffer for Visual Studio Code.
+- ~~[phpcs](https://marketplace.visualstudio.com/items?itemName=ikappas.phpcs): PHP CodeSniffer for Visual Studio Code.~~ **No longer maintained**
 - [phpcbf](https://marketplace.visualstudio.com/items?itemName=persoderlind.vscode-phpcbf): PHP Code Beautifier and Fixer.
 - [PHP DocBlocker](https://marketplace.visualstudio.com/items?itemName=neilbrayfield.php-docblocker): A simple, dependency free PHP specific DocBlocking package.
 - [Git File History](https://marketplace.visualstudio.com/items?itemName=pomber.git-file-history): Modern, fast and intuitive tool for browsing the history and files in any git repository.
