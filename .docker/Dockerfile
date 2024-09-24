@@ -80,7 +80,7 @@ RUN apt-get update && apt-get install -y msmtp msmtp-mta mailutils
 # PHP configuration
 RUN docker-php-source extract && \
     cp '/usr/src/php/php.ini-development' $PHP_INI_DIR/php.ini && \
-    echo "date.timezone=${TZ}" >> $PHP_INI_DIR/conf.d/timezone.ini && \
+    echo "date.timezone=${TZ:-UTC}" >> $PHP_INI_DIR/conf.d/timezone.ini && \
     # Increase file upload size
     echo "upload_max_filesize = 30M" >> $PHP_INI_DIR/conf.d/uploads.ini && \
     echo "post_max_size = 30M" >> $PHP_INI_DIR/conf.d/uploads.ini && \

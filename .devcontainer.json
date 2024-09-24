@@ -10,7 +10,6 @@
   "settings": {
     "php.executablePath": "/usr/local/bin/php",
     "php.validate.executablePath": "/usr/local/bin/php",
-    "phpcs.executablePath": "/usr/local/bin/phpcs",
     "phpcbf.enable": true,
     "phpcbf.executablePath": "/usr/local/bin/phpcbf",
     "phpcbf.documentFormattingProvider": true,
@@ -29,7 +28,6 @@
   // Add the IDs of extensions you want installed when the container is created.
   "extensions": [
     "xdebug.php-debug",
-    "ikappas.phpcs",
     "persoderlind.vscode-phpcbf",
     "neilbrayfield.php-docblocker",
     "usernamehw.errorlens",
