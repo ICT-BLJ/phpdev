@@ -13,7 +13,7 @@
     "phpcbf.enable": true,
     "phpcbf.executablePath": "/usr/local/bin/phpcbf",
     "phpcbf.documentFormattingProvider": true,
-    "phpcbf.onsave": true,
+    "phpcbf.onsave": false,
     "files.eol": "\n",
     "telemetry.enableTelemetry": false,
     "telemetry.enableCrashReporter": false,
