@@ -1,11 +1,11 @@
 # start with the official Composer image and name it
-FROM composer:1.9.3 AS composer
+FROM composer:2 AS composer
 ENV COMPOSER_ALLOW_SUPERUSER 1
 
 ENV DEBIAN_FRONTEND=noninteractive
 ENV DEBCONF_NOWARNINGS="yes"
 
-FROM php:latest AS base
+FROM php:8.4-apache AS base
 ENV COMPOSER_ALLOW_SUPERUSER 1
 ENV LC_ALL C.UTF-8
 #RUN pwd && ls -la
