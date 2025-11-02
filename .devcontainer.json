@@ -10,7 +10,7 @@
   "settings": {
     "php.executablePath": "/usr/local/bin/php",
     "php.validate.executablePath": "/usr/local/bin/php",
-    "phpcbf.enable": true,
+    "phpcbf.enable": false,
     "phpcbf.executablePath": "/usr/local/bin/phpcbf",
     "phpcbf.documentFormattingProvider": true,
     "phpcbf.onsave": false,
