@@ -1,18 +1,17 @@
 <?php
 
-$url = "https://randomname.de/";
+$url = 'https://randomuser.me/api/';
 
-$params = array(
-  "count" => "3",
-  "gender" => "b",
-  "minAge" => "18",
-  "format" => "json"
-);
+$params = [
+    'results' => 3,
+    'nat' => 'ch',
+    'inc' => 'name,location',
+    'noinfo' => '',
+];
 
-$headers = array(
+$headers = [
     'Accept: application/json',
-    'Content-Type: application/json',
-);
+];
 
 $url .= '?' . http_build_query($params);
 
@@ -20,28 +19,24 @@ $curl = curl_init();
 curl_setopt($curl, CURLOPT_URL, $url);
 curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
 curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
-curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, false);
-curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
+curl_setopt($curl, CURLOPT_FOLLOWLOCATION, true);
+curl_setopt($curl, CURLOPT_TIMEOUT, 10);
 
 $response = curl_exec($curl);
 $code = curl_getinfo($curl, CURLINFO_HTTP_CODE);
-curl_close($curl);
 
-# header('Content-Type: application/json; charset=utf-8');
+if ($response === false || $code !== 200) {
+    echo 'error ' . $code . ' ' . curl_error($curl) . PHP_EOL;
+    exit(1);
+}
 
-if ($code == 200) {
-    $response = json_decode($response, true);
-    echo "Got " . count($response) . " entries ..." . PHP_EOL;
-    // Show the json response array to find the keys or RTFM ;)
-    // print_r($response);
-    // Loop over array items
-    for ($i = 0; $i < count($response); $i++) {
-        print PHP_EOL;
-        // Output array item using the appropriate key
-        printf("%s %s" . PHP_EOL, $response[$i]['firstname'], $response[$i]['lastname']);
-        printf("%d %s" . PHP_EOL, $response[$i]['location']['zip'], $response[$i]['location']['city']);
-        print PHP_EOL;
-    }
-} else {
-    echo 'error ' . $code;
+$people = json_decode($response, true)['results'];
+echo 'Got ' . count($people) . ' entries ...' . PHP_EOL;
+// Show the json response array to find the keys or RTFM ;)
+// print_r($people);
+
+foreach ($people as $person) {
+    print PHP_EOL;
+    printf('%s %s' . PHP_EOL, $person['name']['first'], $person['name']['last']);
+    printf('%s %s' . PHP_EOL, $person['location']['postcode'], $person['location']['city']);
 }

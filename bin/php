@@ -1,7 +1,2 @@
-#!/bin/bash
-#/usr/local/bin/php
-DOCK=phpdev
-docker exec \
-    -i \
-    $DOCK \
-    php "$@"
+#!/usr/bin/env bash
+exec docker exec -i phpdev php "$@"

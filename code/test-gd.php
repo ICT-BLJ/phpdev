@@ -1,16 +1,11 @@
 <?php
-if (extension_loaded('gd') && function_exists('gd_info')) {
-    echo "PHP GD library is installed on your web server <br>";
-} else {
-    echo "PHP GD library is NOT installed on your web server <br>";
+
+if (!extension_loaded('gd') || !function_exists('gd_info')) {
+    exit('PHP GD library is NOT installed on your web server <br>');
 }
 
-$infos = gd_info();
-foreach ($infos as $key => $value) {
-    // $arr[3] wird mit jedem Wert von $arr aktualisiert...
-    echo "{$key} => {$value} <br>";
-}
+echo 'PHP GD library is installed on your web server <br>';
 
-// while (list ($key, $val) = each ($a)) {
-//   echo "$key -> $val <br>";
-// }
+foreach (gd_info() as $key => $value) {
+    echo $key . ' => ' . var_export($value, true) . ' <br>';
+}

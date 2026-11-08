@@ -1,3 +1,2 @@
 @echo off
-set PHPBIN="docker exec -i phpdev phpcs"
-"%PHPBIN%" %*
+docker exec -i phpdev phpcs %*
