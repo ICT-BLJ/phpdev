@@ -24,7 +24,17 @@
         "files.trimTrailingWhitespace": true,
         "editor.formatOnSave": true,
         "errorLens.onSave": true,
-        "telemetry.telemetryLevel": "off"
+        "telemetry.telemetryLevel": "off",
+        "chat.disableAIFeatures": true,
+        "github.copilot.enable": {
+          "*": false
+        },
+        "editor.quickSuggestions": {
+          "other": false,
+          "comments": false,
+          "strings": false
+        },
+        "editor.inlineSuggest.enabled": false
       },
       "extensions": [
         "bmewburn.vscode-intelephense-client",
@@ -34,7 +44,9 @@
         "usernamehw.errorlens",
         "eamodio.gitlens",
         "mhutchie.git-graph",
-        "christian-kohler.path-intellisense"
+        "christian-kohler.path-intellisense",
+        "-GitHub.copilot",
+        "-GitHub.copilot-chat"
       ]
     }
   }
